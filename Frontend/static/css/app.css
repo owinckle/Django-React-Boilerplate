@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+	margin: 0;
+	background-color: var(--primary);
+	min-height: 100%;
+	font-family: "Exo", sans-serif;
+	overflow-x: hidden;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+
+:root {
+	--primary: #292633;
+	--secondary: #3b3949;
+	--third: #636488;
+	--fourth: #2d2b3a;
+	--sub: #b6b6bd;
+	--rgb-primary: 41, 38, 51;
+	--rgb-secondary: 59, 57, 73;
+	--rgb-third: 99, 100, 136;
+	--rgb-fourth: 45, 43, 58;
+	--rgb-sub: 182, 182, 189;
+
+	/* Colors */
+	--highlight: #26a5ff;
+	--danger: #ff4b54;
+	--warning: #ff8f00;
+	--success: #33d69f;
+	--rgb-highlight: 38, 165, 255;
+	--rgb-danger: 255, 75, 84;
+	--rgb-warning: 255, 143, 0;
+	--rgb-success: 54, 214, 159;
+
+	/* Variables */
+	--sidebar-width: 70px;
+	--topbar-height: 60px;
+}
+
+a {
+	text-decoration: none;
+}
+
+*:focus {
+	outline: none;
+}
+
+:focus-visible {
+	outline: none;
+}
+
+.grid-layout {
+	display: grid;
+	grid-auto-columns: 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+	grid-row-gap: 16px;
+	grid-column-gap: 16px;
+}
+
+.main-grid {
+	grid-column-gap: 24px;
+	grid-row-gap: 24px;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+}
+
+._2-grid {
+	grid-auto-columns: 1fr;
+	grid-column-gap: 24px;
+	grid-row-gap: 24px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+}
+
+._2-1-grid {
+	grid-column-gap: 24px;
+	grid-row-gap: 24px;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: auto;
+}
+
+._4-grid {
+	grid-auto-columns: 1fr;
+	grid-column-gap: 24px;
+	grid-row-gap: 24px;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+}
+
+._6-grid {
+	padding: 16px 24px;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+}
+
+._7-grid {
+	padding: 16px 24px;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+}
+
+.grid-layout.stacked {
+	align-content: start;
+	grid-column-gap: 24px;
+	grid-row-gap: 24px;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+}
+
+.flex {
+	display: flex;
+}
+
+.ArkButton {
+	cursor: pointer;
+	height: 3rem;
+	border-radius: 3px;
+	border-style: solid;
+	overflow: hidden;
+	position: relative;
+	border-width: 0;
+	outline: 0;
+	white-space: nowrap;
+	border-color: transparent;
+	color: #fff;
+	padding: 0 30px;
+	background: var(--highlight);
+	background-image: linear-gradient(135deg, #fff 50%, transparent 51%);
+	background-size: 100px 100px;
+	background-position: -50px -50px;
+	background-repeat: no-repeat;
+	transition: background ease 0.3s;
+	box-shadow: 0 4px 4px rgba(0,0,0,.4);
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 13px;
+	letter-spacing: 1px;
+	display: flex;
+	align-items: center;
+}
+
+.ArkButton:hover {
+	background-size: 200% 200%;
+	background-position: 0px 0px;
+	color: var(--highlight);
+}
+
+.ArkButton.center {
+	display: inline-flex;
+}
+
+.ArkButton.danger {
+	background: var(--danger);
+	background-image: linear-gradient(135deg, #fff 50%, transparent 51%);
+	background-size: 100px 100px;
+	background-position: -50px -50px;
+	background-repeat: no-repeat;
+	color: #fff;
+}
+
+.ArkButton.danger:hover {
+	color: var(--danger);
+	background-size: 200% 200%;
+	background-position: 0px 0px;
+}
+
+.ArkButton.warning {
+	background: var(--warning);
+	background-image: linear-gradient(135deg, #fff 50%, transparent 51%);
+	background-size: 100px 100px;
+	background-position: -50px -50px;
+	background-repeat: no-repeat;
+	color: #fff;
+}
+
+.ArkButton.warning:hover {
+	color: var(--warning);
+	background-size: 200% 200%;
+	background-position: 0px 0px;
+}
+
+.ArkButton.transparent {
+	background: transparent;
+	background-image: linear-gradient(135deg, #fff 50%, transparent 51%);
+	background-size: 100px 100px;
+	background-position: -50px -50px;
+	background-repeat: no-repeat;
+	color: #fff;
+	border: 1px solid #fff;
+	height: calc(3rem - 2px);
+}
+
+.ArkButton.transparent:hover {
+	color: var(--highlight);
+	background-size: 200% 200%;
+	background-position: 0px 0px;
+}
+
+.text-field {
+	height: 20px;
+	width: calc(100% - 20px);
+	padding: 10px;
+	border-radius: 7px;
+	border: none;
+	background-color: var(--third);
+	color: #fff;
+	letter-spacing: 1px;
+}
